@@ -7,7 +7,7 @@ import 'package:cubit_template/config/bloc/safe_cubit.dart';
 import 'package:flutter/material.dart';
 
 class ThemeCubit extends SafeCubit<ThemeMode> {
-  ThemeCubit() : super(ThemeMode.dark);
+  ThemeCubit() : super(ThemeMode.light);
 
   void toggleTheme() {
     if (state == ThemeMode.dark) {

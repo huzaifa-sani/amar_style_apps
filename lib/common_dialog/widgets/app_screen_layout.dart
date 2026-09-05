@@ -21,27 +21,8 @@ class AppScreenLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colors = context.colors;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-
-    // Use a subtle premium gradient for dark mode, or solid/subtle for light mode.
     final decoration = BoxDecoration(
-      gradient: isDark
-          ? LinearGradient(
-              colors: [
-                colors.background,
-                colors.bACKGROUND_darkCard,
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            )
-          : LinearGradient(
-              colors: [
-                colors.background,
-                colors.bACKGROUND_darkCard.withValues(alpha: 0.4),
-              ],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
+      color: colors.background,
     );
 
     Widget content = Padding(

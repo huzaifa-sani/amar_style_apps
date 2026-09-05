@@ -40,6 +40,7 @@ class ThemeColor extends ThemeExtension<ThemeColor> {
     required this.tEXT_subDark,
     required this.tEXT_white,
     required this.navActiveColor,
+    required this.buttonBlack,
   });
 
   final Color background;
@@ -68,25 +69,26 @@ class ThemeColor extends ThemeExtension<ThemeColor> {
   final Color tEXT_subDark;
   final Color tEXT_white;
   final Color navActiveColor;
+  final Color buttonBlack;
 
   // ── Dark ──────────────────────────────────────────────────────────────────
   static const ThemeColor dark = ThemeColor(
-    background: Color.fromARGB(255, 10, 39, 26), 
+    background: Color(0xFFFDFAF5), 
     // background: Color(0xFF0C2E1E), 
     bACKGROUND_card: Color(0xFFFEFBE8),
     bACKGROUND_clickableBorder: Color(0xFF789086),
-    bACKGROUND_darkCard: Color(0xFF052217),
-    bACKGROUND_darkCardBoarder: Color(0xFF1A3129),
-    bACKGROUND_darkPage: Color(0xFF061512),
-    bACKGROUND_page: Color.fromARGB(255, 55, 92, 74),
+    bACKGROUND_darkCard: Color(0xFFFDFAF5),
+    bACKGROUND_darkCardBoarder: Color(0xFFE2E8F0),
+    bACKGROUND_darkPage: Color(0xFFFFFFFF),
+    bACKGROUND_page: Color(0xFFFDFAF5),
     border_divider: Color(0xFFE5E7EB),
-    iconBorder: Color(0xFF0C2E1E),
+    iconBorder: Color(0xFF4B5563),
     lightYellow: Color(0xFFFFF4CC),
     pRIMARY_brandClr: Color(0xFF184F3A),
     pRIMARY_priLight: Color(0xFF2F6F57),
     pRIMARY_priMedium: Color(0xFF184F3A),
     pRIMARY_priSoft: Color(0xFF6FAE97),
-    ratingPremiumTags_goldAccent: Color(0xFFC8A951),
+    ratingPremiumTags_goldAccent: Color(0xFF000000),
     sTATUS_error: Color(0xFFD14343),
     sTATUS_info: Color(0xFF2F80ED),
     sTATUS_success: Color(0xFF2E7D32),
@@ -94,29 +96,30 @@ class ThemeColor extends ThemeExtension<ThemeColor> {
     socialLinksShareBTN_skyBlue: Color(0xFF3A7CA5),
     successVerifiedPositivestats_freshGrass: Color(0xFF4CAF50),
     tEXT_dark: Color(0xFF1F2933),
-    tEXT_sub: Color(0xFF6B7280),
-    tEXT_subDark: Color(0xFFB2CBC1),
-    tEXT_white: Color(0xFFFFFFFF),
-    navActiveColor: Color(0xFFFFFFFF),
+    tEXT_sub: Color(0xFF4B5563),
+    tEXT_subDark: Color(0xFF6B7280),
+    tEXT_white: Color(0xFF1F2937),
+    navActiveColor: Color(0xFF184F3A),
+    buttonBlack: Color(0xFF000000),
   );
 
   // ── Light ─────────────────────────────────────────────────────────────────
   static const ThemeColor light = ThemeColor(
-    background: Color(0xFFFFFFFF),
+    background: Color(0xFFFDFAF5),
     bACKGROUND_card: Color(0xFFFFFFFF),
     bACKGROUND_clickableBorder: Color.fromARGB(255, 196, 205, 216),
-    bACKGROUND_darkCard: Color(0xFFF8FAF9),
+    bACKGROUND_darkCard: Color(0xFFFDFAF5),
     bACKGROUND_darkCardBoarder: Color(0xFFE2E8F0),
-    bACKGROUND_darkPage: Color(0xFFE5E7EB), // grey.shade200
+    bACKGROUND_darkPage: Color(0xFFFFFFFF),
     bACKGROUND_page: Color(0xFFFFFFFF),
     border_divider: Color(0xFFE5E7EB),
     iconBorder: Color(0xFF4B5563),
     lightYellow: Color.fromARGB(255, 255, 208, 0),
     pRIMARY_brandClr: Color(0xFF184F3A),
-    pRIMARY_priLight: Color(0xFFF9FAFB), // grey.shade50
+    pRIMARY_priLight: Color(0xFFF9FAFB),
     pRIMARY_priMedium: Color(0xFFD1D5DB), // grey.shade300
     pRIMARY_priSoft: Color(0xFF6FAE97),
-    ratingPremiumTags_goldAccent: Color(0xFFC8A951),
+    ratingPremiumTags_goldAccent: Color(0xFF000000), // Green for links
     sTATUS_error: Color(0xFFE05A5A),
     sTATUS_info: Color(0xFF2F80ED),
     sTATUS_success: Color(0xFF2E7D32),
@@ -128,6 +131,7 @@ class ThemeColor extends ThemeExtension<ThemeColor> {
     tEXT_subDark: Color(0xFF6B7280),
     tEXT_white: Color(0xFF1F2937),
     navActiveColor: Color(0xFF184F3A),
+    buttonBlack: Color(0xFF000000),
   );
 
   @override
@@ -158,6 +162,7 @@ class ThemeColor extends ThemeExtension<ThemeColor> {
     Color? tEXT_subDark,
     Color? tEXT_white,
     Color? navActiveColor,
+    Color? buttonBlack,
   }) {
     return ThemeColor(
       background: background_theme ?? background,
@@ -188,6 +193,7 @@ class ThemeColor extends ThemeExtension<ThemeColor> {
       tEXT_subDark: tEXT_subDark ?? this.tEXT_subDark,
       tEXT_white: tEXT_white ?? this.tEXT_white,
       navActiveColor: navActiveColor ?? this.navActiveColor,
+      buttonBlack: buttonBlack ?? this.buttonBlack,
     );
   }
 
@@ -241,6 +247,7 @@ class ThemeColor extends ThemeExtension<ThemeColor> {
       tEXT_subDark: Color.lerp(tEXT_subDark, other.tEXT_subDark, t)!,
       tEXT_white: Color.lerp(tEXT_white, other.tEXT_white, t)!,
       navActiveColor: Color.lerp(navActiveColor, other.navActiveColor, t)!,
+      buttonBlack: Color.lerp(buttonBlack, other.buttonBlack, t)!,
     );
   }
 }

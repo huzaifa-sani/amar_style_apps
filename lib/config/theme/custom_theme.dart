@@ -1,8 +1,3 @@
-/*
- * @Author: Km Muzahid
- * @Date: 2026-02-02 17:29:30
- * @Email: km.muzahid@gmail.com
- */
 import 'package:cubit_template/config/color/app_color.dart';
 import 'package:flutter/material.dart';
 
@@ -81,9 +76,25 @@ ThemeData commonThemeData(ThemeColor appColor) => ThemeData(
     filled: true,
     fillColor: appColor.bACKGROUND_darkPage,
     border: OutlineInputBorder(
-      borderRadius: BorderRadius.circular(40),
+      borderRadius: BorderRadius.circular(8),
       borderSide: BorderSide(
         color: appColor.bACKGROUND_darkCardBoarder,
+        width: 1.5,
+      ),
+    ),
+
+    enabledBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8),
+      borderSide: BorderSide(
+        color: appColor.bACKGROUND_darkCardBoarder,
+        width: 1.5,
+      ),
+    ),
+
+    focusedBorder: OutlineInputBorder(
+      borderRadius: BorderRadius.circular(8),
+      borderSide: BorderSide(
+        color: appColor.pRIMARY_brandClr,
         width: 1.5,
       ),
     ),
@@ -126,27 +137,15 @@ ThemeData commonThemeData(ThemeColor appColor) => ThemeData(
     style: ElevatedButton.styleFrom(
       minimumSize: const Size(80, 50),
       padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 16),
-      backgroundBuilder: (context, states, child) {
-        return Container(
-          decoration: BoxDecoration(
-            gradient: const LinearGradient(
-              colors: [Color(0xFF184F3A), Color(0xFF2F6F57)],
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-            ),
-
-            borderRadius: BorderRadius.circular(8),
-          ),
-          // The 'child' here is the internal label/icon of the button
-          child: Center(child: child),
-        );
-      },
+      backgroundColor: appColor.buttonBlack,
+      foregroundColor: Colors.white,
       shadowColor: Colors.transparent,
       elevation: 0,
-      foregroundColor: Colors.orangeAccent, //loader color
-      textStyle: const TextStyle(color: Colors.white), //title color
+      textStyle: const TextStyle(
+        color: Colors.white,
+        fontWeight: FontWeight.w600,
+      ),
       shape: RoundedRectangleBorder(
-        side: const BorderSide(width: 1.5, color: Colors.transparent),
         borderRadius: BorderRadius.circular(8),
       ),
     ),

@@ -18,7 +18,6 @@ class OtpDialogContent extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          // Centered Gold Lock Icon
           Center(
             child: Container(
               padding: EdgeInsets.all(16.w),

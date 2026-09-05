@@ -38,7 +38,6 @@ class AppCoreKitConfig extends CoreKitConfig
   /// Use this to register dependencies, initialize services, etc.
   @override
   Future<void> Function()? get onInit => () async {
-    //if app installed first time then delete.
-    //save it in flutter shared preferese.
+
   };
 }

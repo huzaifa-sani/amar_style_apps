@@ -18,14 +18,11 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await init();
-  // await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-
   runApp(const MyApp());
 }
 
 Future<void> init() async {
   _diInit();
-  // await Future.wait([dotenv.load()]);
 }
 
 void _diInit() {

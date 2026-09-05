@@ -22,7 +22,6 @@ class ForgetPasswordDialogContent extends StatelessWidget {
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              // Centered Help Icon
               Center(
                 child: Container(
                   padding: EdgeInsets.all(16.w),
