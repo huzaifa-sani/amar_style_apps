@@ -5,7 +5,7 @@ class SplashCubit extends SafeCubit<bool> {
 
   void init() async {
     emit(true);
-    await Future.delayed(const Duration(seconds: 2));
+    await Future.delayed(const Duration(seconds: 60));
     emit(false);
   }
 }

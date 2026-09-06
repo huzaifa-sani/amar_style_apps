@@ -84,7 +84,8 @@ mixin AuthConfig on CoreKitConfig {
       },
       showLogin: () {
         ckApiDebug('showLogin');
-        appRouter.replaceAll([LoginRoute()]);
+        //appRouter.replaceAll([LoginRoute()]);
+        appRouter.replaceAll([LanguageChooseRoute()]);
       },
     );
   }

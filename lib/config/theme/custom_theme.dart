@@ -43,7 +43,6 @@ ThemeData commonThemeData(ThemeColor appColor) => ThemeData(
       return appColor.background;
     }),
 
-    // Border for selected day
     dayShape: WidgetStateProperty.resolveWith((states) {
       if (states.contains(WidgetState.selected)) {
         return const CircleBorder(

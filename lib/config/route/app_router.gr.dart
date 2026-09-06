@@ -8,15 +8,17 @@
 // ignore_for_file: type=lint
 // coverage:ignore-file
 
-// ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:auto_route/auto_route.dart' as _i6;
 import 'package:cubit_template/features/auth/screens/login_screen.dart' as _i2;
 import 'package:cubit_template/features/auth/screens/reset_password_screen.dart'
     as _i3;
 import 'package:cubit_template/features/auth/screens/signup_screen.dart' as _i4;
 import 'package:cubit_template/features/home/home_screen.dart' as _i1;
-import 'package:cubit_template/features/splash/screens/splash_screen.dart'
+import 'package:cubit_template/features/splash_and_onboarding/screens/language_choose_page.dart'
+    as _i7;
+import 'package:cubit_template/features/splash_and_onboarding/screens/splash_screen.dart'
     as _i5;
+
+import 'package:auto_route/auto_route.dart' as _i6;
 
 /// generated route for
 /// [_i1.HomeScreen]
@@ -46,6 +48,22 @@ class LoginRoute extends _i6.PageRouteInfo<void> {
     name,
     builder: (data) {
       return const _i2.LoginScreen();
+    },
+  );
+}
+
+/// generated route for
+/// [_i7.LanguageChoosePage]
+class LanguageChooseRoute extends _i6.PageRouteInfo<void> {
+  const LanguageChooseRoute({List<_i6.PageRouteInfo>? children})
+    : super(LanguageChooseRoute.name, initialChildren: children);
+
+  static const String name = 'LanguageChooseRoute';
+
+  static _i6.PageInfo page = _i6.PageInfo(
+    name,
+    builder: (data) {
+      return const _i7.LanguageChoosePage();
     },
   );
 }

@@ -143,7 +143,7 @@ class _AuthSlideSwitcher extends StatelessWidget {
 }
 
 class _AuthHeader extends StatelessWidget {
-  const _AuthHeader({super.key, required this.title, required this.subtitle});
+  const _AuthHeader({required this.title, required this.subtitle});
 
   final String title;
   final String subtitle;
@@ -261,30 +261,6 @@ class _AuthModeTab extends StatelessWidget {
   }
 }
 
-class _AuthCard extends StatelessWidget {
-  const _AuthCard({required this.child});
-
-  final Widget child;
-
-  @override
-  Widget build(BuildContext context) {
-    final colors = context.colors;
-
-    return Container(
-      padding: EdgeInsets.all(20.w),
-      decoration: BoxDecoration(
-        color: colors.bACKGROUND_darkCard,
-        borderRadius: BorderRadius.circular(16.w),
-        border: Border.all(
-          color: colors.bACKGROUND_darkCardBoarder,
-          width: 1.5,
-        ),
-      ),
-      child: child,
-    );
-  }
-}
-
 class _FieldLabel extends StatelessWidget {
   const _FieldLabel(this.text);
 
@@ -317,12 +293,12 @@ class _SignInForm extends StatelessWidget {
         return Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            const _FieldLabel('Phone Number'),
+            const _FieldLabel('Email Address'),
             8.height,
             CkTextField(
-              hintText: '+880 17',
-              validationType: CkValidationType.validatePhone,
-              onSaved: (value, controller) => formEntity.username = value,
+              hintText: 'Enter your email',
+              validationType: CkValidationType.validateEmail,
+              onChanged: (value) => formEntity.username = value,
             ),
             16.height,
             const _FieldLabel('Password'),
@@ -486,25 +462,37 @@ class _SignUpForm extends StatelessWidget {
               validationType: CkValidationType.validateEmail,
               onSaved: (value, controller) => formEntity.email = value,
             ),
+
             16.height,
+
             const _FieldLabel('Password'),
+
             8.height,
+
             CkTextField(
               hintText: 'Create a password',
               validationType: CkValidationType.validatePassword,
               onChanged: (value) => formEntity.password = value,
             ),
+
             16.height,
+
             const _FieldLabel('Confirm Password'),
+
             8.height,
+
             CkTextField(
               hintText: 'Confirm Password',
               validationType: CkValidationType.validateConfirmPassword,
               originalPassword: () => formEntity.password ?? '',
             ),
+
             16.height,
+
             const _FieldLabel('Phone Number'),
+
             8.height,
+
             CkPhoneNumberTextField(
               textInputAction: TextInputAction.next,
               borderColor: colors.bACKGROUND_darkCardBoarder,

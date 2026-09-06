@@ -1,8 +1,3 @@
-/*
- * @Author: Km Muzahid
- * @Date: 2026-01-07 12:29:06
- * @Email: km.muzahid@gmail.com
- */
 import 'package:auto_route/auto_route.dart';
 import 'package:cubit_template/config/route/app_router.gr.dart';
 
@@ -45,6 +40,7 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
     AutoRoute(page: SplashRoute.page, initial: true),
+    AutoRoute(page: LanguageChooseRoute.page),
     AutoRoute(page: HomeRoute.page),
     AutoRoute(page: LoginRoute.page),
     AutoRoute(page: SignUpRoute.page),
